@@ -10,8 +10,6 @@ void main() {
   );
   Animal leao = Leao(nome: "Rei Leão", especie: "leão", porte: "grande");
 
-  cachorro.emitirSom();
-
   List<Animal> animais = [];
 
   animais.add(cachorro);
@@ -129,7 +127,7 @@ void main() {
         case 1:
           List<Animal> porte = [];
           for (int i = 0; i < animais.length; i++) {
-            if (animais[i].porte == "pequeno"){
+            if (animais[i].porte == "pequeno") {
               porte.add(animais[i]);
             }
           }
@@ -137,10 +135,10 @@ void main() {
             print("${i} - Nome: ${porte[i].nome} - ${porte[i].especie}");
           }
 
-          case 2:
+        case 2:
           List<Animal> porte = [];
           for (int i = 0; i < animais.length; i++) {
-            if (animais[i].porte == "medio"){
+            if (animais[i].porte == "medio") {
               porte.add(animais[i]);
             }
           }
@@ -148,10 +146,10 @@ void main() {
             print("${i} - Nome: ${porte[i].nome} - ${porte[i].especie}");
           }
 
-          case 3:
+        case 3:
           List<Animal> porte = [];
           for (int i = 0; i < animais.length; i++) {
-            if (animais[i].porte == "grande"){
+            if (animais[i].porte == "grande") {
               porte.add(animais[i]);
             }
           }
@@ -161,7 +159,7 @@ void main() {
       }
     }
 
-    //Filtro por especie 
+    //Filtro por especie
     if (filtro == 2) {
       print("Selecione a especie que deseja filtrar: ");
       print("1 - Cachorro\n2- Galinha\n 3 - Leão");
@@ -171,7 +169,7 @@ void main() {
         case 1:
           List<Animal> especie = [];
           for (int i = 0; i < animais.length; i++) {
-            if (animais[i].especie == "cachorro"){
+            if (animais[i].especie == "cachorro") {
               especie.add(animais[i]);
             }
           }
@@ -179,10 +177,10 @@ void main() {
             print("${i} - Nome: ${especie[i].nome} - ${especie[i].especie}");
           }
 
-          case 2:
+        case 2:
           List<Animal> especie = [];
           for (int i = 0; i < animais.length; i++) {
-            if (animais[i].especie == "galinha"){
+            if (animais[i].especie == "galinha") {
               especie.add(animais[i]);
             }
           }
@@ -190,10 +188,10 @@ void main() {
             print("${i} - Nome: ${especie[i].nome} - ${especie[i].especie}");
           }
 
-          case 3:
+        case 3:
           List<Animal> especie = [];
           for (int i = 0; i < animais.length; i++) {
-            if (animais[i].especie == "leao"){
+            if (animais[i].especie == "leao") {
               especie.add(animais[i]);
             }
           }
@@ -201,7 +199,45 @@ void main() {
             print("${i} - Nome: ${especie[i].nome} - ${especie[i].especie}");
           }
       }
+    }
+  }
 
+  if (opcaoUsuario == 6) {
+    for (int i = 0; i < animais.length; i++) {
+      print("${i} - Nome: ${animais[i].nome} - ${animais[i].especie}");
+    }
+    print("Selecione o indice do animal que deseja inserir a idade: ");
+    int indiceAnimal = int.parse(stdin.readLineSync()!);
+
+    for (int i = 0; i < animais.length; i++) {
+      if (i == indiceAnimal) {
+        print("Digite a idade do animal: ");
+        int idade = int.parse(stdin.readLineSync()!);
+        animais[i].alterar_idade = idade;
+        print("Idade adicionada com sucesso! ");
+        print("Lista atualizada: ");
+        print(
+          "${i} - Nome: ${animais[i].nome} - ${animais[i].especie} - idade: ${animais[i].mostrar_idade}",
+        );
+      }
+    }
+  }
+
+  if (opcaoUsuario == 7) {
+    for (int i = 0; i < animais.length; i++) {
+      print("${i} - Nome: ${animais[i].nome} - ${animais[i].especie}");
+    }
+    print("Selecione o indice do animal que deseja ouvir o som: ");
+    int indiceAnimal = int.parse(stdin.readLineSync()!);
+
+    for (int i = 0; i < animais.length; i++) {
+      if (i == indiceAnimal) {
+        print("Animal selecionado: ");
+        print("${i} - Nome: ${animais[i].nome} - ${animais[i].especie} - idade: ${animais[i].mostrar_idade}");
+
+        print("\nSeu som:");
+        animais[i].emitirSom();
+      }
     }
   }
 }
@@ -213,6 +249,8 @@ void menu() {
   print("3 - Editar dados de um animal existente");
   print("4 - Remover um animal");
   print("5 - Aplicar filtro");
+  print("6 - Cadastrar a idade de um animal");
+  print("7 - Ouvir som do animal");
 }
 
 void menuAnimais() {

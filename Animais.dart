@@ -12,11 +12,17 @@ class Animal {
   Animal({required this.nome, required this.especie, required this.porte});
 
   set alterar_idade(int idade) {
-    if (idade > 0) {
-      _idade = idade;
-      print("Idade cadastrada com sucesso");
-    } else {
-      print("Digite uma idade válida. Idade tem que ser maior que 0");
+    bool idadeInvalida = true;
+    print("Digite a idade novamente: ");
+    idade = int.parse(stdin.readLineSync()!);
+    while (idadeInvalida) {
+      if (idade > 0) {
+        _idade = idade;
+        print("Idade cadastrada com sucesso");
+        idadeInvalida = false;
+      } else {
+        print("Digite uma idade válida. Idade tem que ser maior que 0");
+      }
     }
   }
 
@@ -56,11 +62,8 @@ class Galinha extends Animal {
 }
 
 class Leao extends Animal {
-  Leao({
-    required String especie, 
-    required String porte, 
-    required String nome
-    }) : super(especie: especie, porte: porte, nome: nome);
+  Leao({required String especie, required String porte, required String nome})
+    : super(especie: especie, porte: porte, nome: nome);
 
   @override
   void emitirSom() {
