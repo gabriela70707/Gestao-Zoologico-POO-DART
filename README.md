@@ -18,14 +18,18 @@ Explorar conceitos fundamentais da linguagem Dart como:
    git clone https://github.com/seu-usuario/seu-repositorio.git
 Navegue até a pasta do projeto:
 
-bash
+```bash
 cd nome-do-projeto
+```
+
 Execute o programa:
 
-bash
-dart main.dart
-🧩 Estrutura do Projeto
-Código
+ ```bash
+    dart run .\main.dart
+```
+
+## 🧮 Estrutura do Projeto
+
 📁 projeto/
 ├── main.dart
 ├── Animais.dart
@@ -33,11 +37,11 @@ Código
 ├── Galinha.dart
 └── Leao.dart
 
-main.dart: Arquivo principal com o menu e lógica de interação.
+- main.dart: Arquivo principal com o menu e lógica de interação.
 
-Animais.dart: Classe base Animal com atributos e métodos comuns.
+- Animais.dart: Classe base Animal com atributos e métodos comuns.
 
-Cachorro.dart, Galinha.dart, Leao.dart: Classes específicas que herdam de Animal e implementam o método emitirSom.
+- Cachorro.dart, Galinha.dart, Leao.dart: Classes específicas que herdam de Animal e implementam o método emitirSom.
 
 📋 Funcionalidades
 [x] Cadastrar novos animais (Cachorro, Galinha, Leão)
@@ -55,6 +59,7 @@ Cachorro.dart, Galinha.dart, Leao.dart: Classes específicas que herdam de Anima
 [x] Ouvir o som do animal (simulado via terminal)
 
 ## 🐶 Exemplo de uso
+
 Ao iniciar o programa, o usuário verá um menu como este:
 
 
@@ -70,8 +75,8 @@ Ao iniciar o programa, o usuário verá um menu como este:
 
 ## 🛠️ Tecnologias
 
-Dart SDK
-Terminal/CLI
+- Dart SDK
+- Terminal/CLI
 
 📌 Observações
 Este projeto é voltado para fins educacionais e pode ser expandido com persistência de dados, interface gráfica ou integração com banco de dados.
