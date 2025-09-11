@@ -28,7 +28,7 @@ void menuAnimais() {
   print("\n" + "=" * 24);
 }
 
-// Função para mostrar a lista com todos os animais
+
 void mostrarLista(List<Animal> animais) {
   print("\n" + "=" * 12 + " Animais Cadastrados " + "=" * 12 + "\n");
   for (int i = 0; i < animais.length; i++) {
@@ -76,11 +76,7 @@ Animal cadastrarAnimal(String especie) {
 // ===================================================================== MAIN =================================================================================
 void main() {
   //Instanciando objetos
-  Animal cachorro = Cachorro(
-    nome: "Totó",
-    especie: "cachorro",
-    porte: "pequeno",
-  );
+  Animal cachorro = Cachorro(nome: "Totó", especie: "cachorro", porte: "pequeno");
   Animal leao = Leao(nome: "Rei Leão", especie: "leao", porte: "grande");
 
   // Inicializando a lista de animais
