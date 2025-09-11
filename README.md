@@ -31,17 +31,11 @@ Execute o programa:
 ## 🧮 Estrutura do Projeto
 
 📁 projeto/
-├── main.dart
-├── Animais.dart
-├── Cachorro.dart
-├── Galinha.dart
-└── Leao.dart
-
-- main.dart: Arquivo principal com o menu e lógica de interação.
-
-- Animais.dart: Classe base Animal com atributos e métodos comuns.
-
-- Cachorro.dart, Galinha.dart, Leao.dart: Classes específicas que herdam de Animal e implementam o método emitirSom.
+├── main.dart               # Arquivo principal com o menu e lógica de interação
+├── Animais.dart            # Classe base Animal com atributos e métodos comuns
+├── Cachorro.dart           # Classe Cachorro, herda de Animal
+├── Galinha.dart            # Classe Galinha, herda de Animal
+└── Leao.dart               # Classe Leão, herda de Animal
 
 📋 Funcionalidades
 [x] Cadastrar novos animais (Cachorro, Galinha, Leão)
