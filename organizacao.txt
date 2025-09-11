@@ -1,0 +1,3 @@
+// Especie, porte ✅
+// Sistema deve: listar todos os animais, gerar um relatorio simples, executar ações especificas de acordo com o tipo do animal ✅
+// ter pelo o menos 3 subclasses ✅
